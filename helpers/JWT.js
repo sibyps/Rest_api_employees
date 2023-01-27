@@ -8,7 +8,7 @@ const genAccessToken = (user) => {
     if (user._id) {
       resolve(
         jwt.sign({ _id: user._id }, process.env.JWT_AUTH_SECRET, {
-          expiresIn: "15s",
+          expiresIn: "1d",
         })
       );
     }
